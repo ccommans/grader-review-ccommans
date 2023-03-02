@@ -68,8 +68,7 @@ fi
 
 java -cp $CPATH org.junit.runner.JUnitCore TestListExamples >junit-results.txt
 RESULT=`cat junit-results.txt`
-#TESTS_RUN=`grep -o "(?<=Tests run: )\d+" junit-results.txt`
-#echo $TESTS_RUN
+
 if [[ $RESULT == *OK* ]]
 then
     echo All Tests Passed!
@@ -102,4 +101,3 @@ then
     echo Assignment FAILED
 fi
 echo
-
